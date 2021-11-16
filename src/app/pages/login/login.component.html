@@ -1,0 +1,29 @@
+<mat-card class="mat-card-login">
+    <mat-card-title class="mat-header">Login Challenge Bten Frontend</mat-card-title>
+    <div class="div-form">
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="submit()">
+                <p>
+                    <mat-form-field>
+                        <input type="text" matInput placeholder="Usuário" formControlName="username"
+                            [ngClass]="{'form-submitted': formSubmitted}" required>
+                    </mat-form-field>
+                </p>
+    
+                <p>
+                    <mat-form-field>
+                        <input type="password" matInput placeholder="Senha" formControlName="password"
+                            [ngClass]="{'form-submitted': formSubmitted}" required>
+                    </mat-form-field>
+                </p>
+    
+                <div class="button">
+                    <button mat-stroked-button color="primary" type="submit" class="button-login">Login</button>
+                    <button mat-stroked-button color="primary" type="button" class="button-register"
+                        (click)="register()">Register</button>
+                </div>
+    
+            </form>
+        </mat-card-content>
+    </div>
+</mat-card>

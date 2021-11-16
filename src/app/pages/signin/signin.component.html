@@ -1,0 +1,43 @@
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <mat-card-header>
+            <mat-card-title>Register</mat-card-title>
+        </mat-card-header>
+
+        <form [formGroup]="signinForm" class="example-form" (ngSubmit)="submit()">
+
+            <mat-card-content>
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Nome" formControlName="nome" required
+                        [ngClass]="{'form-submitted': formSubmitted}">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="CPF" formControlName="cpf" mask="000.000.000-00" required
+                        [ngClass]="{'form-submitted': formSubmitted}">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Usuário" formControlName="usuario" required
+                        [ngClass]="{'form-submitted': formSubmitted}">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="Senha" formControlName="senha" type="password" required
+                        [ngClass]="{'form-submitted': formSubmitted}">
+                </mat-form-field>
+            </mat-card-content>
+            
+            <div class="div-button">
+                <button mat-stroked-button color="primary" class="btn-block" type="submit">Register</button>
+                <button mat-stroked-button color="primary" class="btn-block button-back" type="button"
+                    (click)="back()">Back</button>
+            </div>
+
+        </form>
+    </mat-card>
+</div>
